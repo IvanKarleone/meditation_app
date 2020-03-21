@@ -1,2 +1,1 @@
-# meditation-app
-Meditation app tutorial
+This app helps you feel goof and relax and do meditation!
