@@ -4,3 +4,26 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 12px;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+}
+
+.switch-time {
+    display: flex;
+    flex: 1;
+}
+
+.timer {
+    display: flex;
+    flex: 1;
+}
+
+.switch-environment {
+    display: flex;
+    flex: 1;
+}
