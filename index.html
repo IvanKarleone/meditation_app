@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <title>Meditation App</title>
 </head>
+
 <body class="page">
-    <div class="switch-time"></div>
+    <video class="page__video" loop>
+        <source src="./video/rain.mp4" type="video/mp4">
+    </video>
+    <div class="switch-time">
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white">
+            2 Minutes
+        </button>
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white">
+            5 Minutes
+        </button>
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white">
+            10 Minutes
+        </button>
+    </div>
     <div class="timer"></div>
     <div class="switch-environment"></div>
 
     <script src="app.js"></script>
 </body>
+
 </html>

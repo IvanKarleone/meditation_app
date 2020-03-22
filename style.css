@@ -11,18 +11,62 @@ html {
 .page {
     display: flex;
     height: 100vh;
+
+    font-family: "Montserrat", "Arial", sans-serif;
 }
 
+.page__video {
+    position: fixed;
+    z-index: -10;
+
+    width: 100%;
+}
+
+/*------------------------ Switch Time Block ------------------------*/
 .switch-time {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     flex: 1;
 }
 
+.time {
+    display: flex;
+    justify-content: center;
+
+    font-family: inherit;
+}
+
+.switch-time__time {
+    padding: 20px 30px;
+
+    font-size: 2rem;
+    color: white;
+
+    background: none;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.switch-time__time_theme-white:hover {
+    color: black;
+
+    background: white;
+}
+
+.switch-time__time_border-white {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/*------------------------ Timer Block ------------------------*/
 .timer {
     display: flex;
     flex: 1;
 }
 
+/*------------------------ Switch Environment Block ------------------------*/
 .switch-environment {
     display: flex;
     flex: 1;
