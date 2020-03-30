@@ -24,10 +24,21 @@
             10 Minutes
         </button>
     </div>
-    <div class="timer"></div>
+    <div class="timer">
+        <audio class="timer__track" loop>
+            <source src="./sounds/rain.mp3" type="audio/mp3">
+        </audio>
+        <div class="controls">
+            <img class="controls__play" src="./svg/play.svg" alt="play">
+            <img class="controls__pause" src="./svg/pause.svg" alt="pause">
+            <img class="controls__replay" src="./svg/replay.svg" alt="replay">
+        </div>
+        <object class="timer__track-outline" type="image/svg+xml" data="./svg/track-outline.svg"></object>
+        <object class="timer__moving-outline" type="image/svg+xml" data="svg/moving-outline.svg"></object>
+        <p class="timer__time">00-00</p>
+    </div>
     <div class="switch-environment"></div>
-
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
