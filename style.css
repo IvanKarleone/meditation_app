@@ -119,5 +119,24 @@ html {
 /*------------------------ Switch Environment Block ------------------------*/
 .switch-environment {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     flex: 1;
+}
+
+.weather {
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.switch-environment__rain {
+    background-color: #4972A1;
+}
+
+.switch-environment__beach {
+    background-color: #A14F49;
 }
