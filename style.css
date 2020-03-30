@@ -20,6 +20,14 @@ html {
     z-index: -10;
 
     width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1320px) {
+    .page__video {
+        width: auto;
+        height: 100%;
+    }
 }
 
 /*------------------------ Switch Time Block ------------------------*/
@@ -47,6 +55,8 @@ html {
     background: none;
 
     transition: all 0.2s ease-in-out;
+
+    cursor: pointer;
 }
 
 .switch-time__time_theme-white:hover {
@@ -62,10 +72,50 @@ html {
 
 /*------------------------ Timer Block ------------------------*/
 .timer {
+    position: relative;
+
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
 }
 
+.timer__time {
+    display: none;
+    margin-top: 30px;
+    justify-content: center;
+
+    font-size: 4rem;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.controls__pause {
+    display: none;
+}
+
+.controls__replay {
+    margin-left: 10px;
+}
+
+.timer__track-outline {
+    position: absolute;
+
+    width: 100%;
+    height: 50%;
+}
+
+.timer__moving-outline {
+    position: absolute;
+
+    display: none;
+    width: 100%;
+    height: 50%;
+}
 /*------------------------ Switch Environment Block ------------------------*/
 .switch-environment {
     display: flex;
