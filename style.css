@@ -82,11 +82,15 @@ html {
 
 .timer__time {
     display: none;
-    margin-top: 30px;
+    margin-top: 20px;
     justify-content: center;
 
     font-size: 4rem;
     color: white;
+}
+
+.timer__time_displayed {
+    display: flex;
 }
 
 .controls {
