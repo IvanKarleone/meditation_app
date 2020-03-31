@@ -11,7 +11,8 @@
 
 <body class="page">
     <video class="page__video" loop>
-        <source src="./video/rain.mp4" type="video/mp4">
+        <source src="./video/rain.mp4" type="video/mp4" data-video="rain">
+        <source src="./video/beach.mp4" type="video/mp4" data-video="beach">
     </video>
     <div class="switch-time">
         <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white"
@@ -29,7 +30,8 @@
     </div>
     <div class="timer">
         <audio class="timer__track" loop>
-            <source src="./sounds/rain.mp3" type="audio/mp3">
+            <source src="./sounds/rain.mp3" type="audio/mp3" data-track="rain">
+            <source src="./sounds/beach.mp3" type="audio/mp3" data-track="beach">
         </audio>
         <svg class="timer__track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -47,10 +49,10 @@
         <p class="timer__time" hidden></p>
     </div>
     <div class="switch-environment">
-        <button class="weather switch-environment__rain">
+        <button class="weather switch-environment__rain" data-environment="rain">
             <img src="./svg/rain.svg" alt="rain">
         </button>
-        <button class="weather switch-environment__beach">
+        <button class="weather switch-environment__beach" data-environment="beach">
             <img src="./svg/beach.svg" alt="beach">
         </button>
     </div>

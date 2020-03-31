@@ -2,6 +2,7 @@
 
 chooseTime();
 clickTimerControls();
+chooseEnvironment();
 
 function clickTimerControls() {
     let play = document.querySelector(".controls__play");
@@ -35,8 +36,8 @@ function clickTimerControls() {
 
             trackOutlineCircle.style.strokeDashoffset = trackOutlineLength * (1 - ((time.seconds - time.leftSeconds) / time.seconds));
             time.leftSeconds--;
-            time.innerText = (time.leftSeconds % 60 >= 10) ? `${Math.floor(time.leftSeconds / 60)}:${time.leftSeconds % 60}` : 
-            `${Math.floor(time.leftSeconds / 60)}:0${time.leftSeconds % 60}`;
+            time.innerText = (time.leftSeconds % 60 >= 10) ? `${Math.floor(time.leftSeconds / 60)}:${time.leftSeconds % 60}` :
+                `${Math.floor(time.leftSeconds / 60)}:0${time.leftSeconds % 60}`;
         }, 1000);
     });
 
@@ -48,6 +49,10 @@ function clickTimerControls() {
     });
 
     replay.addEventListener("click", () => {
+        if (time.hidden) {
+            return;
+        }
+
         endTime();
         play.hidden = false;
         pause.hidden = true;
@@ -83,12 +88,42 @@ function chooseTime() {
         if (prevSeconds != seconds) {
             replay.click();
             prevSeconds = seconds;
+
+            time.seconds = seconds;
+            time.leftSeconds = seconds;
+
+            time.innerText = `${time.seconds / 60}:00`;
+            time.hidden = false;
         }
+    });
+}
 
-        time.seconds = seconds;
-        time.leftSeconds = seconds;
+function chooseEnvironment() {
+    let environment = document.querySelector(".switch-environment");
+    let replay = document.querySelector(".controls__replay");
+    let video = document.querySelector(".page__video");
+    let track = document.querySelector(".timer__track");
+    let prevEnvironment = null;
 
-        time.innerText = `${time.seconds / 60}:00`;
-        time.hidden = false;
+    environment.addEventListener("click", (event) => {
+        let environment = event.target.closest('[data-environment]').dataset.environment;
+
+        if (prevEnvironment != environment) {
+            switch (environment) {
+                case "rain": {
+                    video.src = document.querySelector('[data-video="rain"]').src;
+                    track.src = document.querySelector('[data-track="rain"]').src;
+                    break;
+                }
+                case "beach": {
+                    video.src = document.querySelector('[data-video="beach"]').src;
+                    track.src = document.querySelector('[data-track="beach"]').src;
+                    break;
+                }
+            }
+
+            replay.click();
+            prevEnvironment = environment;
+        }
     });
 }
