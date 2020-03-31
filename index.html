@@ -14,13 +14,16 @@
         <source src="./video/rain.mp4" type="video/mp4">
     </video>
     <div class="switch-time">
-        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white" data-seconds="120">
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white"
+            data-seconds="120">
             2 Minutes
         </button>
-        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white" data-seconds="300">
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white"
+            data-seconds="300">
             5 Minutes
         </button>
-        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white" data-seconds="600">
+        <button class="time switch-time__time switch-time__time_border-white switch-time__time_theme-white"
+            data-seconds="600">
             10 Minutes
         </button>
     </div>
@@ -28,14 +31,20 @@
         <audio class="timer__track" loop>
             <source src="./sounds/rain.mp3" type="audio/mp3">
         </audio>
+        <svg class="timer__track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+        </svg>
+        <svg class="timer__moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+        </svg>
         <div class="controls">
             <img class="controls__play" src="./svg/play.svg" alt="play">
-            <img class="controls__pause" src="./svg/pause.svg" alt="pause">
+            <img class="controls__pause" src="./svg/pause.svg" alt="pause" hidden>
             <img class="controls__replay" src="./svg/replay.svg" alt="replay">
         </div>
-        <object class="timer__track-outline" type="image/svg+xml" data="./svg/track-outline.svg"></object>
-        <object class="timer__moving-outline" type="image/svg+xml" data="svg/moving-outline.svg"></object>
-        <p class="timer__time"></p>
+        <p class="timer__time" hidden></p>
     </div>
     <div class="switch-environment">
         <button class="weather switch-environment__rain">
