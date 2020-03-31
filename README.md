@@ -1,1 +1,1 @@
-This app helps you feel goof and relax and do meditation!
+This app helps you feel good and relax and do meditation!

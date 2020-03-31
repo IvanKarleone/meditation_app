@@ -103,7 +103,7 @@ function chooseEnvironment() {
     let replay = document.querySelector(".controls__replay");
     let video = document.querySelector(".page__video");
     let track = document.querySelector(".timer__track");
-    let prevEnvironment = null;
+    let prevEnvironment = "rain";
 
     environment.addEventListener("click", (event) => {
         let environment = event.target.closest('[data-environment]').dataset.environment;
